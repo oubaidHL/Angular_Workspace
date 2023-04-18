@@ -12,6 +12,7 @@ import { AddannonceComponent } from './addannonce/addannonce.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
     SingleProductComponent,
     NotFoundComponent,
     OffresEmploiComponent,
+    ArticlesComponent,
     
   ],
   imports: [

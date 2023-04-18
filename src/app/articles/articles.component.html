@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Articles</h1>
+  
+    <div class="form-group">
+      <label for="nombre-articles">Nombre d'articles affichés :</label>
+      <input type="number" class="form-control" id="nombre-articles" name="nombre-articles" [(ngModel)]="nombreArticles">
+    </div>
+  
+    <ul class="list-group">
+      <ng-container *ngFor="let article of listeArticles; let i = index">
+        <li class="list-group-item" [ngClass]="{'bg-info text-white': article.categorie === 'Education'}" *ngIf="article.categorie !== 'Travail' && i < nombreArticles">
+          <h3>{{ article.titre }}</h3>
+          <p>{{ article.contenu }}</p>
+          <p>Par {{ article.auteur }}, le {{ article.date }}</p>
+          <p>Catégorie : {{ article.categorie }}</p>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  

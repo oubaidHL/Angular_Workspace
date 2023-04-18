@@ -6,6 +6,7 @@ import { AddannonceComponent } from './addannonce/addannonce.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
       path:'add', component: AddannonceComponent
     }]},
     {path: 'work-page', component: OffresEmploiComponent},
+    {path: 'article', component: ArticlesComponent},
 
 
     
