@@ -1,0 +1,21 @@
+<h2>Products</h2>
+<div class="form-group">
+  <label for="priceFilter">Filter by price:</label>
+  <input type="number" class="form-control" id="priceFilter" [(ngModel)]="priceFilter">
+  <button class="btn btn-primary ml-2" (click)="filterByPrice()">Search</button>
+</div>
+<div class="row">
+  <div class="col-md-4" *ngFor="let product of (filteredList.length > 0 ? filteredList : productList)">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h3 class="card-title">{{product.title}}</h3>
+        <p class="card-text">Price: {{product.price}}</p>
+        <p class="card-text">Quantity: {{product.quantity}}</p>
+        <p class="card-text">Likes: {{product.like}}</p>
+        <button [ngClass]="product.quantity<1? 'btn btn-success': 'btn btn-danger' " [disabled]="product.quantity === 1" class="btn btn-block" (click)="decrementQuantity(product)">Buy</button>
+        <button class="btn btn-block btn-success" (click)="product.like = product.like + 1">Like</button>
+        <a class="btn btn-block btn-warning" [routerLink]="['/products/product/',product.id]">Details</a>
+      </div>
+    </div>
+  </div>
+</div> 
